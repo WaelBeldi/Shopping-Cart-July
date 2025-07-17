@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">ShopHub</a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+        </ul>
+
+        <!-- Shopping Cart Button -->
+        <div class="cart-container">
+          <button class="cart-btn" id="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
+
+          <!-- Cart Dropdown -->
+          <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-header">
+              <h3>Shopping Cart</h3>
+              <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+              <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+              <div class="cart-total">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+              </div>
+              <button class="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+</body>
+</html>
