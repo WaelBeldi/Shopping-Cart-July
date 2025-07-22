@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Shop</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Navbar -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
         <a href="#" class="nav-logo">ShopHub</a>
 
-        <ul class="nav-menu active" id="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#products" class="nav-link">Products</a></li>
         </ul>
@@ -35,6 +41,25 @@
             </div>
             <div class="cart-items" id="cart-items">
               <p class="empty-cart">Your cart is empty</p>
+              <!-- <div class="cart-item">
+                <img
+                  src="Micro-Casque-Gaming-Sans-Fil-MSI-Immerse-GH50-S37-4300010-SV1-5.webp"
+                  alt="micro casque gaming"
+                  class="cart-item-image"
+                />
+                <div class="cart-item-info">
+                  <div class="cart-item-name">Product Name</div>
+                  <div class="cart-item-price">$99.99</div>
+                </div>
+                <div class="cart-item-quantity">
+                  <button class="quantity-btn">-</button>
+                  <span class="quantity-number">1</span>
+                  <button class="quantity-btn">+</button>
+                </div>
+                <button class="remove-item">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div> -->
             </div>
             <div class="cart-footer">
               <div class="cart-total">
@@ -55,7 +80,11 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="container">
+      <video autoplay muted loop class="hero-bg-video">
+        <source src="shop.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-bg-overlay"></div>
+      <div class="container heroContainer">
         <h1>Welcome to ShopHub</h1>
         <p>
           Discover amazing products at unbeatable prices. Your one-stop shop for
@@ -92,7 +121,7 @@
                 data-id="1"
                 data-name="Wireless Headphones"
                 data-price="99.99"
-                data-image="Micro-Casque-Gaming-Sans-Fil-MSI-Immerse-GH50-S37-4300010-SV1-5-PMo1cGAMDg3Y5CMOO0xnSGA6c0yUS7.webp"
+                data-image="Micro-Casque-Gaming-Sans-Fil-MSI-Immerse-GH50-S37-4300010-SV1-5.webp"
               >
                 <i class="fas fa-shopping-cart"></i> Add to Cart
               </button>
@@ -188,9 +217,39 @@
 
     <!-- Footer -->
     <footer class="footer">
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get updates on new products and offers.</p>
+        <div style="display: flex; margin-top: 1rem">
+          <input
+            type="email"
+            placeholder="Your email"
+            style="
+              flex: 1;
+              padding: 0.5rem;
+              border: none;
+              border-radius: 0.25rem 0 0 0.25rem;
+            "
+            id="newsletter-email"
+          />
+          <button
+            style="
+              background: #e53e3e;
+              color: white;
+              border: none;
+              padding: 0.5rem 1rem;
+              border-radius: 0 0.25rem 0.25rem 0;
+              cursor: pointer;
+            "
+            id="newsletter-submit"
+          >
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
       <p class="footer-content">&copy; 2025 ShopHub. All rights reserved.</p>
     </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

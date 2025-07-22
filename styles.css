@@ -1,3 +1,18 @@
+/* Animation for removing cart item */
+.cart-item.removing {
+  animation: fadeOutCartItem 0.5s forwards;
+}
+
+@keyframes fadeOutCartItem {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -281,10 +296,12 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
   color: white;
   text-align: center;
   padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -296,6 +313,35 @@ body {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Hero section video background */
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay for hero section video background */
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Products Section */
@@ -436,6 +482,25 @@ body {
   background: #2d3748;
   color: white;
   padding: 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  color: #e53e3e;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #a0aec0;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.footer-section a:hover {
+  color: white;
 }
 
 .footer-content {
